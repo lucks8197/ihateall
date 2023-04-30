@@ -2,25 +2,6 @@
 
 // personal hell
 
-struct SceneInfo {
-
-};
-
-class SceneManager : public sf::Drawable {
-public:
-	SceneManager() {
-
-	}
-	void tick() {
-
-	}
-
-private: // there are some things in life that we just don't question and move on
-	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const {
-
-	};
-};
-
 class Grid: public sf::Drawable {
 public:
 	sf::Vector2i pos;
@@ -30,7 +11,7 @@ public:
 
 	Grid(){}
 
-	Grid(sf::Texture t) {
+	Grid(sf::Texture& t) {
 		t.setSmooth(false);
 		texture = t;
 		s.setTexture(texture);
@@ -48,7 +29,7 @@ public:
 		s.setPosition(sf::Vector2f(pos.x*scale, pos.y*scale));
 	}
 
-	void tick(SceneInfo& p) {
+	void tick() {
 
 	}
 
